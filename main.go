@@ -16,13 +16,13 @@ func main() {
 		// Generate key pair
 		fmt.Println("generate keys")
 	case "-enc":
-		// Generate key pair
+		// Encrypt
 		fmt.Println("encrypt")
 	case "-dec":
-		// Generate key pair
+		// Decrypt
 		fmt.Println("decrypt")
 	case "-tokgen":
-		// Generate key pair
+		// Generate token
 		fmt.Println("generate tokens")
 	default:
 		fmt.Println("<show menu>")
