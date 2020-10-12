@@ -1,32 +1,19 @@
 package main
 
 import (
-	"fmt"
 	"os"
 )
 
-// Main method implements a basic routine that can be used as an example for other applications.
-// Only working now for 3d multivectors.
 func main() {
-	f := os.Args[1]
 
-	// TODO: check the case where nothing is provided.
-	switch f {
-	case "-keygen":
-		// Generate key pair
-		fmt.Println("generate keys")
-	case "-enc":
-		// Encrypt
-		fmt.Println("encrypt")
-	case "-dec":
-		// Decrypt
-		fmt.Println("decrypt")
-	case "-tokgen":
-		// Generate token
-		fmt.Println("generate tokens")
-	default:
-		fmt.Println("<show menu>")
+	if len(os.Args) <= 3 {
+		printGeneralMenu()
+		exitProgram()
 	}
+
+	// Flag comming from the user
+	checkInputs(os.Args[1:])
+
 	// switch f {
 	// case "-k":
 	// 	// Generate key pair
@@ -56,15 +43,6 @@ func main() {
 	// 	fmt.Println("-1")
 	// }
 }
-
-// func generateKey(b string) string {
-// 	n, err := strconv.Atoi(b)
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// 	k := edche.GenerateKey(n)
-// 	return k
-// }
 
 // func encrypt(n, s1, s2 string) string {
 // 	mn := edche.NumberToMultivector(n)
