@@ -29,6 +29,18 @@ func addKeyRing(kr *KeyRing, sk *phe.SecretKey, pk *phe.PublicKey, tk *phe.Token
 	return kr
 }
 
+func (kr *KeyRing) lastSecretKey() *phe.SecretKey {
+	return kr.SK[len(kr.SK)-1]
+}
+
+func (kr *KeyRing) lastPublicKey() *phe.PublicKey {
+	return kr.PK[len(kr.PK)-1]
+}
+
+func (kr *KeyRing) lastToken() *phe.Token {
+	return kr.TK[len(kr.TK)-1]
+}
+
 // ToString ...
 func (kr *KeyRing) ToString() {
 	i := 0

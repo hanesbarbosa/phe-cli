@@ -1,23 +1,35 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/big"
+
+	"github.com/hanesbarbosa/phe"
+)
 
 func enc(args []string) {
 	flags := args[1:]
 	// Check number of flags
-	if len(flags) != 6 {
-		// Abort with the name of the originating function
-		abort(args[0])
-	}
-	if flags[0] == "-sk" && flags[1] == "./file" &&
-		flags[2] == "-pk" && flags[3] == "./file" &&
-		flags[4] == "-m" && checkIntegerFormat(flags[5]) {
-		fmt.Println("Encrypt")
+	if len(flags) == 4 {
+		if flags[0] == "-kr" && flags[2] == "-m" && checkIntegerFormat(flags[3]) {
+			kr := readKeyRing(flags[1])
+
+			m := big.NewInt(0)
+			m.SetString(flags[3], 10)
+
+			sk := kr.lastSecretKey()
+			pk := kr.lastPublicKey()
+
+			c := phe.Encrypt(sk, pk, m)
+
+			fmt.Println(c.ToString())
+		}
 	} else {
+		// Abort giving the name of the originating function
 		abort(args[0])
 	}
 }
 
 func printEncMenu() {
-	fmt.Println(SystemName + " -enc -sk <File> -pk <File> -m <Positive Integer>")
+	fmt.Println(SystemName + " -enc -kr <key ring file> -m <positive integer>")
 }
