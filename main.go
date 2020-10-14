@@ -31,7 +31,7 @@ func checkInputs(args []string) {
 		dec(args)
 	case "-tokgen":
 		// Generate token
-		tokgen(args)
+		tokGen(args)
 	default:
 		abort("main")
 	}

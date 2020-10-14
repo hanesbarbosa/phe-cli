@@ -1,24 +1,34 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-func tokgen(args []string) {
+	"github.com/hanesbarbosa/phe"
+)
+
+// tokGen ...
+func tokGen(args []string) {
 	flags := args[1:]
 	// Check number of flags
-	if len(flags) != 8 {
-		// Abort with the name of the originating function
-		abort(args[0])
-	}
-	if flags[0] == "-sk-old" && flags[1] == "./file" &&
-		flags[2] == "-sk-new" && flags[3] == "./file" &&
-		flags[4] == "-pk-old" && flags[5] == "./file" &&
-		flags[6] == "-pk-new" && flags[7] == "./file" {
-		fmt.Println("Token Generator")
+	if len(flags) == 2 && flags[0] == "-kr" && fileExists(flags[1]) {
+		kr := readKeyRing(flags[1])
+		skOld := kr.lastSecretKey()
+		pkOld := kr.lastPublicKey()
+
+		l := pkOld.B * 8
+		skNew, pkNew := phe.GenerateKeys(l)
+
+		tk := phe.GenerateToken(skOld, skNew, pkOld, pkNew)
+		kr = addKeyRing(kr, skNew, pkNew, tk)
+
+		writeKeyRing(kr, flags[1])
+		kr.ToString()
 	} else {
+		// Abort giving the name of the originating function
 		abort(args[0])
 	}
 }
 
 func printTokGenMenu() {
-	fmt.Println(SystemName + " tokgen -sk-old <File> -sk-new <File> -pk-old <File> -pk-new <File>")
+	fmt.Println(SystemName + " tokgen -kr <key ring file>")
 }
