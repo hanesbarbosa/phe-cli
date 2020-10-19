@@ -1,6 +1,7 @@
-github.com/hanesbarbosa/phe v1.0.0 h1:ULtfFzx62/KSzi7yFeImVp0cfyLvIn0uFyfMPX5roNs=
-github.com/hanesbarbosa/phe v1.0.0/go.mod h1:N+BmZJ8lQyXEk/IQHoo/wQUt6UYDdj46sn1r8qclYRs=
-github.com/hanesbarbosa/phe v1.0.1 h1:BPNBuR4y3uF0st8vt7BH7+qucr3HvqwNFac6DZePLjc=
-github.com/hanesbarbosa/phe v1.0.1/go.mod h1:N+BmZJ8lQyXEk/IQHoo/wQUt6UYDdj46sn1r8qclYRs=
-github.com/hanesbarbosa/phe v1.0.2 h1:1VpS1Alq6rY7Y/1kPmt53XY9qYWKqt7d5MJj86gQdfQ=
-github.com/hanesbarbosa/phe v1.0.2/go.mod h1:N+BmZJ8lQyXEk/IQHoo/wQUt6UYDdj46sn1r8qclYRs=
+github.com/hanesbarbosa/phe v1.0.3 h1:KXB/pnlL1hqluskzU35jfgjxxgZFq1qxuxD0XfP628Q=
+github.com/hanesbarbosa/phe v1.0.3/go.mod h1:N+BmZJ8lQyXEk/IQHoo/wQUt6UYDdj46sn1r8qclYRs=
+github.com/hanesbarbosa/phe v1.0.4 h1:Ep+wYbcxy6cKuHT5K1+OBZQ+z+5q2e7SULgaVmFOlVU=
+github.com/hanesbarbosa/phe v1.0.4/go.mod h1:N+BmZJ8lQyXEk/IQHoo/wQUt6UYDdj46sn1r8qclYRs=
+github.com/hanesbarbosa/phe v1.0.5 h1:SZ2LbKs/lOe19g/RIcnZMS/ZQqN42M1H0WIwU35YpV4=
+github.com/hanesbarbosa/phe v1.0.5/go.mod h1:ovI85GFY0ptZNpY3a+TRo6yuEANcL5B56SewbCw/p0Y=
+github.com/roasbeef/go-go-gadget-paillier v0.0.0-20181009074315-14f1f86b6000/go.mod h1:GbaLtXlO/CWjBZzgF70Gfq+iyj51b64JMWu0zT/YEkY=
