@@ -32,6 +32,9 @@ func checkInputs(args []string) {
 	case "--tokgen":
 		// Generate token
 		tokGen(args)
+	case "--listkeys":
+		// List all keys
+		listKeys(args)
 	default:
 		abort("main")
 	}
@@ -47,6 +50,8 @@ func printMenu(function string) {
 		printDecMenu()
 	case "--tokgen":
 		printTokGenMenu()
+	case "--listkeys":
+		printListKeysMenu()
 	case "main":
 		printMainMenu()
 	}
@@ -62,4 +67,5 @@ func printMainMenu() {
 	printEncMenu()
 	printDecMenu()
 	printTokGenMenu()
+	printListKeysMenu()
 }

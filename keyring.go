@@ -41,8 +41,8 @@ func (kr *KeyRing) lastToken() *phe.Token {
 	return kr.TK[len(kr.TK)-1]
 }
 
-// ToString ...
-func (kr *KeyRing) ToString() {
+// List ...
+func (kr *KeyRing) List() {
 	i := 0
 	for i < len(kr.SK) {
 		is := strconv.Itoa(i)

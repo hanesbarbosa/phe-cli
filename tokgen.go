@@ -22,7 +22,7 @@ func tokGen(args []string) {
 		kr = addKeyRing(kr, skNew, pkNew, tk)
 
 		writeKeyRing(kr, flags[1])
-		kr.ToString()
+		kr.List()
 	} else {
 		// Abort giving the name of the originating function
 		abort(args[0])

@@ -25,7 +25,7 @@ func keyGen(args []string) {
 				kr = newKeyRing(sk, pk, &phe.Token{})
 			}
 			writeKeyRing(kr, flags[3])
-			kr.ToString()
+			kr.List()
 		}
 	} else {
 		// Abort giving the name of the originating function
