@@ -29,5 +29,5 @@ func dec(args []string) {
 }
 
 func printDecMenu() {
-	fmt.Println(SystemName + " -dec -kr <key ring file> -c <string multivector>")
+	fmt.Println(SystemName + " --decrypt -kr <key ring file> -c <string multivector>")
 }

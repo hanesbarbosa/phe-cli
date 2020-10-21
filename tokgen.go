@@ -30,5 +30,5 @@ func tokGen(args []string) {
 }
 
 func printTokGenMenu() {
-	fmt.Println(SystemName + " tokgen -kr <key ring file>")
+	fmt.Println(SystemName + " --tokgen -kr <key ring file>")
 }

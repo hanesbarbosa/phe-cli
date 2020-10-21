@@ -9,7 +9,7 @@ const SystemName = "phe-cli"
 
 func main() {
 
-	if len(os.Args) <= 3 {
+	if len(os.Args) < 2 {
 		abort("main")
 	}
 
@@ -20,16 +20,16 @@ func main() {
 func checkInputs(args []string) {
 	// TODO: check the case where nothing is provided.
 	switch args[0] {
-	case "-keygen":
+	case "--keygen":
 		// Generate key pair
 		keyGen(args)
-	case "-enc":
+	case "--encrypt":
 		// Encrypt
 		enc(args)
-	case "-dec":
+	case "--decrypt":
 		// Decrypt
 		dec(args)
-	case "-tokgen":
+	case "--tokgen":
 		// Generate token
 		tokGen(args)
 	default:
@@ -39,23 +39,27 @@ func checkInputs(args []string) {
 
 func printMenu(function string) {
 	switch function {
-	case "-keygen":
+	case "--keygen":
 		printKeyGenMenu()
-	case "-enc":
+	case "--encrypt":
 		printEncMenu()
-	case "-dec":
+	case "--decrypt":
 		printDecMenu()
-	case "-tokgen":
+	case "--tokgen":
 		printTokGenMenu()
-	default:
-		printKeyGenMenu()
-		printEncMenu()
-		printDecMenu()
-		printTokGenMenu()
+	case "main":
+		printMainMenu()
 	}
 }
 
 func abort(function string) {
 	printMenu(function)
 	os.Exit(1)
+}
+
+func printMainMenu() {
+	printKeyGenMenu()
+	printEncMenu()
+	printDecMenu()
+	printTokGenMenu()
 }

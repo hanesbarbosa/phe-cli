@@ -35,5 +35,5 @@ func keyGen(args []string) {
 
 // printKeyGenMenu ...
 func printKeyGenMenu() {
-	fmt.Println(SystemName + " -keygen -l <positive integer> -kr <key ring file>")
+	fmt.Println(SystemName + " --keygen -l <positive integer> -kr <key ring file>")
 }

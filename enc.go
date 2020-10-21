@@ -31,5 +31,5 @@ func enc(args []string) {
 }
 
 func printEncMenu() {
-	fmt.Println(SystemName + " -enc -kr <key ring file> -m <positive integer>")
+	fmt.Println(SystemName + " --encrypt -kr <key ring file> -m <positive integer>")
 }
