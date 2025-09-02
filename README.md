@@ -1,6 +1,6 @@
 # Smart Contract for Ownership Transfer (SCOT)
 
-This repository implements the **CLI component**, a software that imports the cryptographic library and extends its properties by creating interactive user functions for the SCOT system.
+This repository implements the Command Line Interface (CLI) component for the user (i.e., phe-cli), a software that imports the cryptographic library [phe](https://github.com/hanesbarbosa/phe) and extends its properties by creating interactive user functions for the SCOT system.
 
 SCOT is a proof of concept that implements the abstract model and the cryptographic construction devised in the thesis [IMPROVED DISTRIBUTED LEDGER TRANSACTIONS WITH HOMOMORPHIC COMPUTATIONS](https://uccs.idm.oclc.org/login?url=https://www.proquest.com/dissertations-theses/improved-distributed-ledger-transactions-with/docview/2469874959/se-2?accountid=25388).
 
