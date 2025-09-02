@@ -2,7 +2,7 @@
 
 This repository implements the **CLI component**, a software that imports the cryptographic library and extends its properties by creating interactive user functions for the SCOT system.
 
-SCOT is a proof of concept that implements the abstract model and the cryptographic construction devised in the thesis [IMPROVED DISTRIBUTED LEDGER TRANSACTIONS WITH HOMOMORPHIC COMPUTATIONS](https://search.proquest.com/openview/b489617cd47d9d8139a397a29ca489ab/1?pq-origsite=gscholar&cbl=44156&casa_token=7kRmPoFVW1gAAAAA:SRpuSZ8v3S96Szu4LbaGK4yHMW9PuoknPgennILMFhYacXXFjpukUQ8HNkJt5jl192SN5k3Cd3r7](https://www.proquest.com/docview/2469874959?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses).
+SCOT is a proof of concept that implements the abstract model and the cryptographic construction devised in the thesis [IMPROVED DISTRIBUTED LEDGER TRANSACTIONS WITH HOMOMORPHIC COMPUTATIONS](https://uccs.idm.oclc.org/login?url=https://www.proquest.com/dissertations-theses/improved-distributed-ledger-transactions-with/docview/2469874959/se-2?accountid=25388).
 
 The concept is explained at page 86, in chapter 5 (i.e., Software Architecture of SCOT).
 
