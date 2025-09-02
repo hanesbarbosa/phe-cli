@@ -4,6 +4,8 @@ SCOT is a proof of concept that implements the abstract model and the cryptograp
 
 This work proposes a model to protect and transfer data ownership securely, driven by Homomorphic Encryption (HE) primitives and protocols applied to private blockchain technologies. Regarding Blockchain-as-a-Service (BaaS), our contribution seeks to alleviate issues such as third-party custody of digital assets, opportunism, and other adversarial issues.
 
+## phe-cli
+
 This repository implements the Command Line Interface (CLI) component for the user (i.e., phe-cli), a software that imports the cryptographic library [phe](https://github.com/hanesbarbosa/phe) and extends its properties by creating interactive user functions for the SCOT system.
 
 The concept is explained at page 86, in chapter 5 (i.e., Software Architecture of SCOT).
